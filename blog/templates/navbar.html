@@ -1,0 +1,20 @@
+
+
+
+<ul>
+    <li><a href="/blog">Strona główna</a></li>
+    <li><a href="kontakt">Kontakt</a></li>
+
+    {% if user.is_authenticated %}
+
+    <li><a href="#">Witaj, {{user.username}}</a></li>
+    <li><a href="logout">Wyloguj się</a></li>    
+    
+    {% else %}
+        
+    <li><a href="login">Zaloguj się</a></li>       
+    <li><a href="register">Zarejestruj się</a></li>
+
+    {% endif %}
+</ul>
+

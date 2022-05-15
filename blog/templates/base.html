@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'blog.css' %}" type="text/css"/>
+</head>
+
+<body>
+    {% include "navbar.html" %}
+
+    {% include "includes/messages.html" %}
+
+    {% block content %}
+    
+    {% endblock %}
+</body>
+<footer>
+    {% block footer %}
+    {% endblock %}
+</footer>
+
+</html>
